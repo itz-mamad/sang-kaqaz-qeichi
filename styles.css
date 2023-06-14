@@ -1,0 +1,88 @@
+/* styles.css */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+.player-info {
+  margin-bottom: 20px;
+}
+
+.player-info label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.player-info input[type="text"] {
+  padding: 5px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.game {
+  margin-bottom: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+}
+
+.score span {
+  margin-left: 5px;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.choice-btn {
+  font-size: 36px;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resultText {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#resetBtn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
