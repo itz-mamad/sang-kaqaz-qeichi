@@ -10,14 +10,22 @@ const resultText = document.getElementById("resultText");
 const resetBtn = document.getElementById("resetBtn");
 const playerScoreText = document.getElementById("playerScore");
 const aiScoreText = document.getElementById("aiScore");
+const darkModeToggle = document.getElementById("darkModeToggle");
+const body = document.body;
 
 let playerName = "Player";
 let playerScore = 0;
 let aiScore = 0;
+let darkModeEnabled = false;
 
 startGameButton.addEventListener("click", () => {
   playerName = playerNameInput.value.trim() || "Player";
-  playerNameText.textContent = playerName;
+  if (playerName !== "Player") {
+    playerNameText.textContent = playerName;
+  } else {
+    playerNameText.textContent = "Player";
+  }
+
   playerNameInput.value = "";
   startGameButton.disabled = true;
 });
@@ -26,6 +34,7 @@ rockBtn.addEventListener("click", () => playGame("rock"));
 paperBtn.addEventListener("click", () => playGame("paper"));
 scissorsBtn.addEventListener("click", () => playGame("scissors"));
 resetBtn.addEventListener("click", resetGame);
+darkModeToggle.addEventListener("change", toggleDarkMode);
 
 function playGame(playerChoice) {
   const aiChoice = getAIChoice();
@@ -101,5 +110,14 @@ function getEmoji(choice) {
     return "📄";
   } else {
     return "✂️";
+  }
+}
+
+function toggleDarkMode() {
+  darkModeEnabled = !darkModeEnabled;
+  if (darkModeEnabled) {
+    body.classList.add("dark-mode");
+  } else {
+    body.classList.remove("dark-mode");
   }
 }
